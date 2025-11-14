@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ahnaf Ayub">
+  <meta name="description" content="Testing CSS overflow behavior for a text box.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Overflow Behavior Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #1e1e2f;
+      text-align: center;
+    }
+
+    .box {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #1e1e2f;
+      padding: 10px;
+      margin: 25px auto;
+      background-color: #fff;
+    }
+
+    /* 1️⃣ Overflow: visible — content overflows outside the box */
+    .visible-box {
+      overflow: visible; /* Content spills outside the box — no clipping or scrollbars */
+    }
+
+    /* 2️⃣ Overflow: hidden — extra content is cut off */
+    .hidden-box {
+      overflow: hidden; /* Extra text is hidden beyond the box’s borders */
+    }
+
+    /* 3️⃣ Overflow: scroll — always shows scrollbars */
+    .scroll-box {
+      overflow: scroll; /* Scrollbars appear even if content fits */
+    }
+
+    /* 4️⃣ Overflow: auto — scrollbars appear only when needed */
+    .auto-box {
+      overflow: auto; /* Adds scrollbars only if content exceeds box size */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Testing CSS Overflow Behavior</h2>
+
+  <div class="box visible-box">
+    <strong>Overflow: visible</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada mauris non nisi accumsan, nec viverra ligula sodales. Donec feugiat eros vel commodo eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros nec gravida gravida. Suspendisse sit amet libero augue. Sed quis accumsan ipsum. Donec ut elit quis eros accumsan blandit non et elit.</p>
+  </div>
+
+  <div class="box hidden-box">
+    <strong>Overflow: hidden</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada mauris non nisi accumsan, nec viverra ligula sodales. Donec feugiat eros vel commodo eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros nec gravida gravida. Suspendisse sit amet libero augue. Sed quis accumsan ipsum. Donec ut elit quis eros accumsan blandit non et elit.</p>
+  </div>
+
+  <div class="box scroll-box">
+    <strong>Overflow: scroll</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada mauris non nisi accumsan, nec viverra ligula sodales. Donec feugiat eros vel commodo eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros nec gravida gravida. Suspendisse sit amet libero augue. Sed quis accumsan ipsum. Donec ut elit quis eros accumsan blandit non et elit.</p>
+  </div>
+
+  <div class="box auto-box">
+    <strong>Overflow: auto</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada mauris non nisi accumsan, nec viverra ligula sodales. Donec feugiat eros vel commodo eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit eros nec gravida gravida. Suspendisse sit amet libero augue. Sed quis accumsan ipsum. Donec ut elit quis eros accumsan blandit non et elit.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ahnaf Ayub">
+  <meta name="description" content="Floating Contact Widget for company website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Contact Widget</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Long content to enable scrolling */
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .content p {
+      margin-bottom: 25px;
+    }
+
+    /* Floating Contact Box */
+    .contact-widget {
+      position: fixed;           /* Keeps the box in the same spot on screen */
+      bottom: 20px;              /* Distance from bottom */
+      right: 20px;               /* Distance from right edge */
+      background-color: #1e1e2f; /* Dark background color */
+      color: white;              /* White text for contrast */
+      padding: 15px 20px;        /* Space inside the box */
+      border-radius: 8px;        /* Rounded corners */
+      border: 2px solid #444;    /* Visible border */
+      z-index: 9999;             /* Keeps widget above all other content */
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
+
+    .contact-widget:hover {
+      background-color: #333357; /* Changes color on hover */
+    }
+
+    .contact-widget h4 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+
+    .contact-widget a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    .contact-widget a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>Welcome to Our Company</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit tortor eu lorem consequat, in mattis nulla dictum. Mauris non accumsan lacus. Curabitur sed posuere risus, ut tempus orci.</p>
+    <p>Scroll down to test the floating contact widget. It will remain visible as you scroll through the page content.</p>
+    <p>Vivamus porta nunc eu diam sodales, ac tincidunt felis dictum. Nulla facilisi. Donec nec vestibulum justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    <p>Phasellus dictum erat non mauris pharetra, a tincidunt justo ullamcorper. Nulla facilisi. Integer id nulla nec eros convallis egestas. Sed iaculis fermentum nunc a suscipit.</p>
+    <p>Keep scrolling... The contact widget stays fixed in the bottom-right corner.</p>
+    <p style="margin-bottom: 800px;">This is just filler content to make the page longer for scrolling purposes.</p>
+  </div>
+
+  <!-- Floating Contact Widget -->
+  <div class="contact-widget">
+    <h4>📞 Contact Us</h4>
+    <p>Phone: <a href="tel:+880123456789">+880 123 456 789</a></p>
+    <p>Email: <a href="mailto:support@company.com">support@company.com</a></p>
+  </div>
+
+</body>
+</html>

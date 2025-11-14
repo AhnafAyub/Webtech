@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ahnaf Ayub">
+  <meta name="description" content="University Admission Form for new students - Computer Science Program">
+  <meta name="keywords" content="university, admission, form, student registration, computer science">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Admission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #1e1e2f;
+      color: white;
+      padding: 20px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 25px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e1e2f;
+    }
+
+    fieldset {
+      margin-bottom: 25px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #1e1e2f;
+      padding: 0 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    .inline {
+      display: inline-block;
+      width: auto;
+      margin-right: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+
+    .submit-btn {
+      background-color: #1e1e2f;
+      color: white;
+    }
+
+    .reset-btn {
+      background-color: #ccc;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1e1e2f;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ABC University</h1>
+    <p>Online Admission Form for New Students</p>
+  </header>
+
+  <main>
+    <h2>Admission Application</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <!-- Personal Information Section -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fullname" maxlength="50" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male" class="inline">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female" class="inline">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other" class="inline">Other</label>
+
+        <label>Interests:</label>
+        <input type="checkbox" id="ai" name="interest" value="AI">
+        <label for="ai" class="inline">Artificial Intelligence</label>
+
+        <input type="checkbox" id="cyber" name="interest" value="Cybersecurity">
+        <label for="cyber" class="inline">Cybersecurity</label>
+
+        <input type="checkbox" id="ds" name="interest" value="Data Science">
+        <label for="ds" class="inline">Data Science</label>
+      </fieldset>
+
+      <!-- Academic Information Section -->
+      <fieldset>
+        <legend>Academic Information</legend>
+
+        <label for="hsc">Last Qualification:</label>
+        <input type="text" id="hsc" name="qualification" maxlength="100" placeholder="e.g., HSC / A-Levels" required>
+
+        <label for="year">Passing Year:</label>
+        <input type="number" id="year" name="year" placeholder="e.g., 2024" min="2000" max="2025" required>
+
+        <label for="result">Result (GPA / CGPA):</label>
+        <input type="text" id="result" name="result" maxlength="10" placeholder="e.g., 5.00" required>
+
+        <label for="department">Preferred Department:</label>
+        <select id="department" name="department" required>
+          <option value="">-- Select Department --</option>
+          <option value="cse">Computer Science & Engineering</option>
+          <option value="eee">Electrical & Electronic Engineering</option>
+          <option value="bba">Business Administration</option>
+          <option value="eng">English</option>
+        </select>
+
+        <label for="file">Upload Required Documents (Transcript, Resume, etc.):</label>
+        <input type="file" id="file" name="documents" accept=".pdf,.doc,.jpg,.png" required>
+      </fieldset>
+
+      <!-- Submit & Reset -->
+      <div style="text-align:center;">
+        <button type="submit" class="submit-btn">Submit Application</button>
+        <button type="reset" class="reset-btn">Reset Form</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ABC University | Admission Office</p>
+  </footer>
+
+</body>
+</html>
